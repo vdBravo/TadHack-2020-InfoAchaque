@@ -16,7 +16,7 @@ Estos se corren en la terminal con el comando npm run dev
 4)	abrir un nuevo terminal y descargar por comandos 
 antes de descargar angular ejecutamos una ventana de comandos power Shell como administrador y ejecutamos este comando para que nos de permisos Set-ExecutionPolicy -Scope CurrentUser unrestricted
 después nos devolvemos a la terminal y descargamos las demás dependencias
-angular = npm install @angular/cli -
+angular = npm install @angular/cli
 bootswatch = npm install bootswatch
 ng2 = npm install ng2
 ngx-pagination = npm install ngx-pagination
