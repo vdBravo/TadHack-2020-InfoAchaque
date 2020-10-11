@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+<!--The content below is only a placeholder and can be replaced.-->
+<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top" >
+  <div class="container-small">
+    <div class="navbar-brand" href="#three">
+      <img src="https://i.ibb.co/LJ4Vy8j/Dise-o-sin-t-tulo.png" alt="Info Achaque" width="180" height="90">
+    </div>
+  </div>
+  <div class="container-fluid align-items-end">
+  <ul class="nav justify-content-end">
+  
+    <li class="nav-item">
+      <a class="nav-link" href="#one">Top15</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#two">Comparativa</a>
+    </li>
+    
+  </ul></div>
+</nav>
+
+<div class="container p-6">
+  <app-incidencia></app-incidencia>
+</div>
+
+<div class="container-fluid">
+<app-comparativa></app-comparativa>
+</div>
+
+
+<div class="jumbotron jumbotron-fluid">
+  <div class="container">
+    <h1 class="display-4">¡Suscribete!</h1>
+    <p class="lead">Recibe mensajes de texto con información de las nuevas incidencias de tu municipio, 
+      consejos para evitar contagios y consejos de salud.</p>
+    <hr class="my-4">
+    <form #mensajeForm ="ngForm" (ngSubmit) = "mensajeUsuario(mensajeForm)">
+      <div class="form-group">
+        <label for="name">Nombre</label>
+        <input type="text" class="form-control" id="name" aria-describedby="Nombre">
+        
+      </div>
+
+      <div class="form-group">
+        <label for="numcel">Celular</label>
+        <input type="number" class="form-control" name="numero" placeholder="escriba su numero de Celular" 
+        [(ngModel)] = "incidenciaService.numeroC" id="numcel">
+      </div>
+
+      <div class="form-group">
+        <label for="region">Municipio</label>
+        <input type="text" class="form-control" id="region">
+      </div>
+      
+      <div class="form-group">
+        <button class="btn btn-primary">Enviar</button>
+    </div>
+    </form>
+  </div>
+</div>
+
+</body>
+</html>

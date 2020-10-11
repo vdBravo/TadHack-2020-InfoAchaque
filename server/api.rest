@@ -1,0 +1,29 @@
+###
+GET  http://localhost:3000/api/incidencias
+
+###
+POST http://localhost:3000/api/incidencias
+Content-Type: application/json
+
+{
+    "municipio": "Diana",
+    "enfermedad": "Pereza",
+    "totalF": "1111",
+    "totalM":"1111",
+    "totalG": "1111"
+}
+###
+GET  http://localhost:3000/api/incidencias
+
+###
+DELETE http://localhost:3000/api/incidencias/5f81641cf1c684261899745d
+
+###
+PUT http://localhost:3000/api/incidencias/5f81641cf1c684261899745d
+Content-Type: application/json
+
+{
+    "municipio": "Popayan"
+}
+###
+GET  http://localhost:3000/api/incidencias/

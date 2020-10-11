@@ -1,0 +1,50 @@
+<body data-spy="scroll" data-target="#navbar-example">
+    
+    <div id="div1">
+    
+
+<div class="container-fluid mx-auto" style="width: 850px;">
+<div class="row ">
+    <div class="col-12">
+      <div class="form-group">
+        <input type="text" class="form-control" name="filterPost" placeholder="INGRESA TU MUNICIPIO" [(ngModel)]="filterPost">
+      </div>
+    </div>
+  </div>
+<div class="row">
+        <div class="col-12 table-responsive text-center">
+            <table class="table table-sm">
+                <thead>
+                    <tr>
+                        
+                        <th >Municipio</th>
+                        <th >Enfermedad</th>
+                        <th >Total Mujeres</th>
+                        <th >Total Hombres</th>
+                        <th >Total General</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor= "let incidencia of incidenciaService.incidencias | filter:filterPost ">
+                        <td>{{incidencia.municipio}}</td>
+                        <td>{{incidencia.enfermedad}}</td>
+                        <td>{{incidencia.totalF }}</td> 
+                        <td>{{incidencia.totalM }}</td> 
+                        <td>{{incidencia.totalG }}</td>    
+                    </tr>
+                </tbody>
+            </table>
+           
+            
+        </div>
+    </div>
+</div>
+
+
+
+</div>
+
+</body>
+<br>
+<br>
+<br>
